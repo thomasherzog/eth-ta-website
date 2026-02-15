@@ -1,0 +1,30 @@
+---
+const { course, year, department, link } = Astro.props;
+---
+
+<a
+    href={link}
+    class="flex flex-col rounded-xl p-6 lg:flex-1 relative course-card"
+>
+    <div class="flex justify-between items-start mb-2">
+        <h3 class="text-lg font-semibold">{course}</h3>
+        <span class="text-gray-400 bg-transparent px-2 py-1 rounded">
+            {department}
+        </span>
+    </div>
+    <p class="text-sm">{year}</p>
+</a>
+
+<style>
+    .course-card {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border: 1px solid #1f1f1f;
+        transition: all 0.3s ease;
+    }
+
+    .course-card:hover {
+        border-color: rgba(0, 123, 255, 0.8);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+    }
+</style>

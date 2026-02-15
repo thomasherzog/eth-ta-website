@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CourseCard from "../components/index/CourseCard.astro";
+---
+
+<Layout>
+	<section class="flex flex-col gap-4 mb-8">
+		<div class="flex flex-row items-center gap-4 mb-4">
+			<h2 class="text-xl font-bold">Current Courses</h2>
+			<div class="h-px grow bg-white/10"></div>
+		</div>
+		<div class="flex lg:flex-row flex-col gap-4">
+			<CourseCard
+				course="Informatik I"
+				year="FS 2026"
+				department="ITET"
+				link="https://polybox.ethz.ch/index.php/s/jWtpt6dPRFa7YRW"
+			/>
+			<CourseCard
+				course="Programming with Python"
+				year="FS 2026"
+				department="CAS"
+				link="https://polybox.ethz.ch/index.php/s/S9SJzRf8bAHynCH"/>
+		</div>
+	</section>
+
+	<section class="flex flex-col gap-4 mb-8">
+		<div class="flex flex-row items-center gap-4 mb-4">
+			<h2 class="text-xl font-bold">Archive</h2>
+			<div class="h-px grow bg-white/20"></div>
+		</div>
+		<div class="flex lg:flex-row flex-col gap-4">
+			<CourseCard
+				course="Informatik I"
+				year="FS 2024"
+				department="ITET"
+				link="https://polybox.ethz.ch/index.php/s/wgZne1UMGLxy260"
+			/>
+			<CourseCard
+				course="Informatik II"
+				year="HS 2023"
+				department="ITET"
+				link="https://polybox.ethz.ch/index.php/s/m38ZgEsaUbAjzkv"/>
+		</div>
+		<div class="flex lg:flex-row flex-col gap-4">
+			<CourseCard
+				course="Technische Mechanik"
+				year="HS 2023"
+				department="ITET"
+				link="https://polybox.ethz.ch/index.php/s/8EPARWP6q0q15Yq"
+			/>
+			<CourseCard
+				course="Technische Mechanik"
+				year="HS 2022"
+				department="ITET"
+				link="https://polybox.ethz.ch/index.php/s/5bIU5joXLYwo6jw"/>
+		</div>
+	</section>
+
+	<!-- <section class="mb-8">
+		<div class="flex flex-row items-center gap-4 mb-4">
+			<h2>Documents</h2>
+			<div class="h-px grow bg-white/20"></div>
+		</div>
+		<div class="flex lg:flex-row flex-col gap-4">
+			<CourseCard
+				course="Lineare Algebra"
+				year="HS 2023"
+				department="ITET"
+				link="/courses/cs1-2026"
+			/>
+		</div>
+	</section> -->
+</Layout>
+
+<style>
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		color: #c0c0c0;
+		line-height: 1.6;
+	}
+</style>
